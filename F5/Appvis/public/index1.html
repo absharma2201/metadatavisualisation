@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+    To change this license header, choose License Headers in Project Properties.
+    To change this template file, choose Tools | Templates
+    and open the template in the editor.
+    -->
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
+        <title>Application Visibility</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous" >
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="bootstrap-theme.min.css" crossorigin="anonymous" >
+        <script src="jquery.min.js" type="text/javascript"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="bootstrap.min.js" crossorigin="anonymous" type="text/javascript"></script>
+        <link rel="stylesheet" href="scjc.css" >
+        <script src="d3.v3.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="col-lg-10 col-lg-offset-1">
+            <div id="mainModal">
+                <div class="container clearfix ndshead">
+                    <div class="row rowpad">
+                        <div class="col-lg-2">
+                            <a class="logo"></a>
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-1" style="font-size: 20px;">
+                            <label id="mode1" class="heading">Application Visibility</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="display:block;">
+                    <div class="custom-select" style="width:200px; display:block; margin-left: auto; margin-right: auto; margin: auto;">
+                        <select id="region" onchange="showbigip()">
+                            <option value="0">Select Region</option>
+                            <option value="1">Asia-Pacific</option>
+                            <option value="2">Europe and The Middle East</option>
+                            <option value="3">Americas</option>
+                        </select>
+                    </div>
+                    <div class="custom-select" style="width:200px; display:block; margin-left: auto; margin-right: auto;">
+                        <select  id="datalength">
+                            <option value="live" selected>
+                                Live
+                            </option>
+                            <option value="historic-24h">
+                                Last 24 Hours
+                            </option>
+                            <!--<option value="historic-2d">Last 2 Days</option>-->
+                        </select>
+                    </div>
+                    <div id="bigiptoshow" style="display:none; margin:auto;" >
+                        <img border="0" alt="F5BigIPMachine" src="assets/images/F5-BIGIP-LTM-ICON.png" width="100" height="100">
+                    </div>
+                    <script type="text/javascript">
+                        function showbigip() {
+                                var x = document.getElementById("region").value;
+                                if (x == 0){
+                                        document.getElementById("bigiptoshow").style.display = "none";
+                                } else {
+                                        document.getElementById("bigiptoshow").style.display = "block";
+                                }
+                        }
+                    </script>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 tborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">WAN Data Consumption</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="wanutilt" style="height: 360px"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 trborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">OT vs Internet</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="ot" style="height: 360px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 bborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">OffLoad</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="cachet" style="height: 360px"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 brborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">CPU</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="cput2" style="height: 360px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div id="slider" style="height: 100px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row rowpad">
+                        <span class="sectiontitle">&#169;2019 F5 Networks</span>
+                    </div>
+                </div>
+            </div>
+            <div id="wanModal" class="modal">
+                <div class="container modal-content">
+                    <div class="row">
+                        <div class="clearfix ndshead centerheadline">
+                            <div class="row rowpad">
+                                <div class="col-lg-2">
+                                    <a class="logo"></a>
+                                </div>
+                                <div class="col-lg-6 col-lg-offset-1" style="font-size:18px;">
+                                    <label id="mode2" class="heading">Application Visibility</label>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="ndslogo">
+                                        <span class="close" style="background-color: #ffffff;">[ x ]</span>
+                                    </div>
+                                    <div class="ndslogo">
+                                        <select class="datalength" id="datalength">
+                                            <option value="live" selected>
+                                                Live
+                                            </option>
+                                            <option value="historic-24h">
+                                                Last 24 Hours
+                                            </option>
+                                            <!--<option value="historic-2d">Last 2 Days</option>-->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 tborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">Data Consumption By Application Groups</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="donutc" style="height: 350px"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 trborder">
+                            <div class="col-lg-4">
+                                <label class="sectiontitle" id="groupname">Data Consumption by</label>
+                            </div>
+                            <div class="col-lg-8" style="padding-left: 20px">
+                                <input type="radio" name="appcons" id="appcons" class="appcons" value="top" checked disabled>
+                                <span style="font-size: 12px">Top 10 Applications</span>
+                                <input type="radio" name="appcons" id="appcons" class="appcons" value="selected" disabled> <span style="font-size: 12px" class="selectedgrp">Top 10 Selected</span>
+                                <span style="font-size: 12px">Applications</span>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="barc" style="height: 350px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 bborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">Bandwidth Usage By Application Groups</label>
+                            </div>
+                            <div id="stacareat" style="height: 360px"></div>
+                        </div>
+                        <div class="col-lg-6 brborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">Bandwidth Usage By
+                                </label>
+                                <label class="sectiontitle"><span id="mlinetop">&nbsp;Top 10 Applications</span>
+                                </label>
+                            </div>
+                            <div id="linet" style="height: 360px"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 txborder">
+                            <div class="col-lg-8">
+                                <label class="sectiontitle">DataPath</label>
+                            </div>
+                            <div id="proccput" style="height: 360px"></div>
+                        </div>
+                        <div class="col-lg-6 tyborder">
+                            <div class="col-lg-8" >
+                                <label class="sectiontitle">C P U</label>
+                            </div>
+                            <div id="cput" style="height: 360px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="util.js" type="text/javascript"></script>
+        <script src="stareai.js" type="text/javascript"></script>
+        <script src="donuti.js" type="text/javascript"></script>
+        <script src="oti.js" type="text/javascript"></script>
+        <script src="mlinei.js" type="text/javascript"></script>
+        <script src="utilwani.js" type="text/javascript"></script>
+        <script src="proccpui.js" type="text/javascript"></script>
+        <script src="cpui.js" type="text/javascript"></script>
+        <script src="cpuj.js" type="text/javascript"></script>
+        <script src="cachei.js" type="text/javascript"></script>
+        <script src="bari.js" type="text/javascript"></script>
+        <script src="wanmodal.js" type="text/javascript"></script>
+        <script src="data_retriever.js" type="text/javascript"></script>
+    </body>
+</html>

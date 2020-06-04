@@ -1,0 +1,85 @@
+require ('shelljs/global');
+
+var express = require('express');
+var fs = require('fs');
+var cors = require('cors');
+var bodyParser = require('body-parser');
+var app = express();
+
+app.use(express.static('.'));
+//app.use(cors({credentials: true, origin: true}));
+
+app.options('*', cors({credentials: true, origin: true}));
+
+
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+// ROUTES FOR OUR API
+// =============================================================================
+//var router = express.Router();              // get an instance of the express Router
+
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+/*router.get('*', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
+});
+*/
+
+//router.get('*', function (req, res) {
+app.get('/apprep_stats', function (req, res) {
+        console.log("Got a GET request for the homepage");
+
+	var queryData = require('url').parse(req.url, true).query;
+//	response.writeHead(200, {"Content-Type": "text/plain"});
+
+	console.log("string written " + queryData.query_name + '\n');
+	if (queryData.query_name) {
+	// user told us their name in the GET request, ex: http://host:8000/?query_name=abcdi
+	res.json({'a':1});
+	//res.send();
+
+	} else {
+	res.send("Hello World\n");
+	}
+
+
+/*	var str;
+	if (req.url == '/dpdk_cmode') {
+   		res.send('Hello DPDK');
+		//fs.writeFileSync('/a/etc/scripts/run_mode', 'DPDK', 'utf8');
+		fs.writeFileSync('/a/etc/scripts/run_mode', 3, 'utf8');
+	} else if (req.url == '/non_dpdk_cmode') {
+   		res.send('Hello NON DPDK');
+		//fs.writeFileSync('/a/etc/scripts/run_mode', 'NON DPDK', 'utf8');
+		fs.writeFileSync('/a/etc/scripts/run_mode', 2, 'utf8');
+	} else if (req.url == '/default_cmode') {
+   		res.send('Hello DEFAULT');
+		//fs.writeFileSync('/a/etc/scripts/run_mode', 'Default', 'utf8');
+		fs.writeFileSync('/a/etc/scripts/run_mode', 1, 'utf8');
+	}
+	str = cat('/a/etc/scripts/run_mode');
+	console.log("string written " + str.toString());
+*/
+
+})
+
+// This responds a POST request for the homepage
+app.post('/', function (req, res) {
+   console.log("Got a POST request for the homepage");
+   res.send('Hello POST');
+})
+
+// This responds a DELETE request for the /del_user page.
+app.delete('/del', function (req, res) {
+   console.log("Got a DELETE request for /del_user");
+   res.send('Hello DELETE');
+})
+
+
+
+var server = app.listen(4000, '172.16.242.67');
+
+console.log("Example app listening at http://172.16.242.67:4000");

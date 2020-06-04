@@ -1,0 +1,612 @@
+{
+"trafficClassGroups": [
+        {
+            "id": 1,
+            "name": "SaaS"
+        },
+        {
+            "id": 2,
+            "name": "SocialNet"
+        },
+        {
+            "id": 3,
+            "name": "CorpTraffic"
+        },
+        {
+            "id": 4,
+            "name": "WebMail"
+        },
+        {
+            "id": 5,
+            "name": "WebConf"
+        },
+        {
+            "id": 6,
+            "name": "RealTime"
+        },
+        {
+            "id": 7,
+            "name": "VidStreaming"
+        },
+        {
+            "id": 8,
+            "name": "News&Ent"
+        },
+        {
+            "id": 9,
+            "name": "SwUpdates"
+        },
+        {
+            "id": 10,
+            "name": "WebBrowsing"
+        },
+        {
+            "id": 11,
+            "name": "Ads&Analytics"
+        },
+        {
+            "id": 12,
+            "name": "OT"
+        },
+        {
+            "id": 13,
+            "name": "TestGroup"
+        },
+        {
+            "id": 14,
+            "name": "Downloads"
+        },
+        {
+            "id": 999,
+            "name": "Others"
+        }
+    ],
+	"trafficClasses": [
+		{
+			"id": 0,
+			"name": "Others",
+			"type": "APPLICATION",
+			"group_id": 999
+		},
+		{
+			"id": 5000,
+			"name": "base",
+			"type": "NETWORK",
+			"group_id": 999
+		},
+		{
+			"id": 5001,
+			"name": "Facebook",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5002,
+			"name": "Skype",
+			"type": "APPLICATION",
+			"group_id": 5
+		},
+		{
+			"id": 5003,
+			"name": "Gmail",
+			"type": "APPLICATION",
+			"group_id": 4
+		},
+		{
+			"id": 5004,
+			"name": "Yahoomail",
+			"type": "APPLICATION",
+			"group_id": 4
+		},
+		{
+			"id": 5005,
+			"name": "Youtube",
+			"type": "APPLICATION",
+			"group_id": 7
+		},
+		{
+			"id": 5006,
+			"name": "GoogleServices",
+			"type": "APPLICATION",
+			"group_id": 10
+		},
+		{
+			"id": 5007,
+			"name": "GooglePhotos",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5008,
+			"name": "GoogleEarth",
+			"type": "APPLICATION",
+			"group_id": 10
+		},
+		{
+			"id": 5009,
+			"name": "GoogleNews",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5010,
+			"name": "GoogleAnalytics",
+			"type": "APPLICATION",
+			"group_id": 11
+		},
+		{
+			"id": 5011,
+			"name": "GoogleTalk",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5012,
+			"name": "GoogleMaps",
+			"type": "APPLICATION",
+			"group_id": 10
+		},
+		{
+			"id": 5013,
+			"name": "GooglePlay",
+			"type": "APPLICATION",
+			"group_id": 9
+		},
+		{
+			"id": 5014,
+			"name": "GoogleDrive",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5015,
+			"name": "GooglePlus",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5016,
+			"name": "GoogleAds",
+			"type": "APPLICATION",
+			"group_id": 11
+		},
+		{
+			"id": 5017,
+			"name": "AkamaiWebmail",
+			"type": "APPLICATION",
+			"group_id": 4
+		},
+		{
+			"id": 5018,
+			"name": "Twitter",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5019,
+			"name": "TwitterVideo",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5020,
+			"name": "YahooAds",
+			"type": "APPLICATION",
+			"group_id": 11
+		},
+		{
+			"id": 5021,
+			"name": "LinkedIn",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5022,
+			"name": "Instagram",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5023,
+			"name": "Netflix",
+			"type": "APPLICATION",
+			"group_id": 7
+		},
+		{
+			"id": 5024,
+			"name": "FacebookChat",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5025,
+			"name": "Sophos",
+			"type": "APPLICATION",
+			"group_id": 9
+		},
+		{
+			"id": 5026,
+			"name": "Evernote",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5027,
+			"name": "Yammer",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5028,
+			"name": "Concur",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5029,
+			"name": "Office365",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5030,
+			"name": "O365-Outlook",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5031,
+			"name": "O365-Word",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5032,
+			"name": "O365-Excel",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5033,
+			"name": "O365-Powerpoint",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5034,
+			"name": "O365-Sharepoint",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5035,
+			"name": "O365-OneDrive",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5036,
+			"name": "O365-OneNote",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5037,
+			"name": "AkamaiCorp",
+			"type": "APPLICATION",
+			"group_id": 3
+		},
+		{
+			"id": 5038,
+			"name": "Apple",
+			"type": "APPLICATION",
+			"group_id": 9
+		},
+		{
+			"id": 5039,
+			"name": "Lync",
+			"type": "APPLICATION",
+			"group_id": 5
+		},
+		{
+			"id": 5040,
+			"name": "Oracle",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5041,
+			"name": "SuccessFactors",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5042,
+			"name": "Webex",
+			"type": "APPLICATION",
+			"group_id": 5
+		},
+		{
+			"id": 5043,
+			"name": "ADP",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5044,
+			"name": "Box",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5045,
+			"name": "Dropbox",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5046,
+			"name": "AmazonWS",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5047,
+			"name": "ColudFrontCDN",
+			"type": "APPLICATION",
+			"group_id": 10
+		},
+		{
+			"id": 5048,
+			"name": "Bugzilla",
+			"type": "APPLICATION",
+			"group_id": 3
+		},
+		{
+			"id": 5049,
+			"name": "ApplePush",
+			"type": "APPLICATION",
+			"group_id": 9
+		},
+		{
+			"id": 5050,
+			"name": "AppleUpdates",
+			"type": "APPLICATION",
+			"group_id": 9
+		},
+		{
+			"id": 5051,
+			"name": "iCloud",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5052,
+			"name": "iTunes",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5053,
+			"name": "Github",
+			"type": "APPLICATION",
+			"group_id": 3
+		},
+		{
+			"id": 5054,
+			"name": "CNN",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5055,
+			"name": "Vimeo",
+			"type": "APPLICATION",
+			"group_id": 7
+		},
+		{
+			"id": 5056,
+			"name": "Salesforce",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5057,
+			"name": "NDTV",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5058,
+			"name": "Tumblr",
+			"type": "APPLICATION",
+			"group_id": 2
+		},
+		{
+			"id": 5059,
+			"name": "Imdb",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5060,
+			"name": "SoundCloud",
+			"type": "APPLICATION",
+			"group_id": 8
+		},
+		{
+			"id": 5061,
+			"name": "AmazonCloudDrive",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5062,
+			"name": "Oracle-EBS",
+			"type": "APPLICATION",
+			"group_id": 1
+		},
+		{
+			"id": 5063,
+			"name": "GoogleHangouts",
+			"type": "APPLICATION",
+			"group_id": 2 
+		},
+		{
+                        "id": 5064,
+                        "name": "Pinterest",
+                        "type": "APPLICATION",
+                        "group_id": 2 
+                },
+                {
+                        "id": 5065,
+                        "name": "AkamUniv",
+                        "type": "APPLICATION",
+                        "group_id": 3
+                },
+		{
+                        "id": 5066,
+                        "name": "AkamConfluence",
+                        "type": "APPLICATION",
+                        "group_id": 3
+                },
+		{
+                        "id": 5067,
+                        "name": "SophosUpdates",
+                        "type": "APPLICATION",
+                        "group_id": 9 
+                },
+		{
+                        "id": 5068,
+                        "name": "UbuntuUpdates",
+                        "type": "APPLICATION",
+                        "group_id": 9
+                },
+		{
+                        "id": 5069,
+                        "name": "Cedexis",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+		{
+                        "id": 5070,
+                        "name": "AppNexus",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+		{
+                        "id": 5071,
+                        "name": "ScorecardResearch",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+		{
+                        "id": 5072,
+                        "name": "LiveRail",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+		{		
+                        "id": 5073,
+                        "name": "DoubleClick",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+	        {
+                        "id": 5074,
+                        "name": "OtherAds",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+	        {
+                        "id": 5075,
+                        "name": "OtherAnalytics",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+                {
+                        "id": 5076,
+                        "name": "YahooAnalytics",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+                {
+                        "id": 5077,
+                        "name": "Chartbeat",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+                {
+                        "id": 5078,
+                        "name": "Pubmatic",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+                {
+                        "id": 5079,
+                        "name": "Taboola",
+                        "type": "APPLICATION",
+                        "group_id": 11
+                },
+                {
+                        "id": 5080,
+                        "name": "Ipsec",
+                        "type": "APPLICATION",
+                        "group_id": 12
+                },
+                {
+                        "id": 5081,
+                        "name": "RDP",
+                        "type": "APPLICATION",
+                        "group_id": 999
+                },
+                {
+                        "id": 5082,
+                        "name": "SSH",
+                        "type": "APPLICATION",
+                        "group_id": 999
+                },
+                {
+                        "id": 5083,
+                        "name": "Telnet",
+                        "type": "NETWORK",
+                        "group_id": 999
+                },
+                {
+                        "id": 5084,
+                        "name": "FTP",
+                        "type": "APPLICATION",
+                        "group_id": 999
+                },
+                {
+                        "id": 5085,
+                        "name": "IPERF_TCP",
+                        "type": "NETWORK",
+                        "group_id": 13
+                },
+                {
+                        "id": 5086,
+                        "name": "IPERF_UDP",
+                        "type": "NETWORK",
+                        "group_id": 13
+                },
+                {
+                        "id": 5087,
+                        "name": "VoIP_Test",
+                        "type": "NETWORK",
+                        "group_id": 6
+                },
+                {
+                        "id": 5088,
+                        "name": "Cache",
+                        "type": "NETWORK",
+                        "group_id": 14
+                },
+                {
+                        "id": 5089,
+                        "name": "ICMP",
+                        "type": "NETWORK",
+                        "group_id": 999
+                }
+	]
+}

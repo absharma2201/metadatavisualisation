@@ -1,0 +1,148 @@
+
+*********************************
+NON -DPDK
+**********************************
+---------------------
+Speed test statistics
+
+---------------------
+
+Download speed: 1979 kbps
+
+Upload speed: 2695 kbps
+
+Download consistency of service: 77 %
+
+Upload consistency of service: 89 %
+
+Download test type: socket
+
+Upload test type: socket
+
+Maximum TCP delay: 214 ms
+
+Average download pause: 15 ms
+
+Minimum round trip time to server: 220 ms
+
+Average round trip time to server: 239 ms
+
+Estimated download bandwidth: 38629 kbps
+
+Route concurrency: 19.519266
+
+Download TCP forced idle: 94 %
+
+Maximum route speed: 2383 kbps
+
+
+
+VoIP test statistics
+
+--------------------
+
+Jitter: you --> server: 0.0 ms
+
+Jitter: server --> you: 5.0 ms
+
+Packet loss: you --> server: 0.0 %
+
+Packet loss: server --> you: 0.0 %
+
+Packet discards: 0.0 %
+
+Packets out of order: 0.0 %
+
+Estimated MOS score: 4.1
+
+
+
+
+
+General information
+
+-------------------
+
+IP address: 104.101.220.21
+
+Local time: Oct 21, 2016 1:44:58 PM
+
+Test server: http://192.84.16.30:82/
+
+
+
+
+
+
+
+
+
+**************************************8
+DPDK
+**************************************
+Speed test statistics
+
+---------------------
+
+Download speed: 2163 kbps
+
+Upload speed: 2560 kbps
+
+Download consistency of service: 63 %
+
+Upload consistency of service: 87 %
+
+Download test type: socket
+
+Upload test type: socket
+
+Maximum TCP delay: 214 ms
+
+Average download pause: 15 ms
+
+Minimum round trip time to server: 228 ms
+
+Average round trip time to server: 235 ms
+
+Estimated download bandwidth: 54884 kbps
+
+Route concurrency: 25.36795
+
+Download TCP forced idle: 96 %
+
+Maximum route speed: 2299 kbps
+
+
+
+VoIP test statistics
+
+--------------------
+
+Jitter: you --> server: 0.0 ms
+
+Jitter: server --> you: 0.2 ms
+
+Packet loss: you --> server: 0.0 %
+
+Packet loss: server --> you: 0.0 %
+
+Packet discards: 0.0 %
+
+Packets out of order: 0.0 %
+
+Estimated MOS score: 4.2
+
+
+
+
+
+General information
+
+-------------------
+
+IP address: 104.101.220.21
+
+Local time: Oct 21, 2016 1:58:12 PM
+
+Test server: http://192.84.16.30:82/
+
